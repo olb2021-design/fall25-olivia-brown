@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    font-size: 18px;
+    list-style-type: none;
+    display: inline-block;
+}
+
+li {
+  color: blue;
+  display: inline;
+  background-color: lightgrey;
+  padding: 8px 12px;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
