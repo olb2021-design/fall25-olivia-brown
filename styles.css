@@ -1,28 +1,24 @@
-h1 {
-    text-align: center;
-    background-color: #e87f7f;
-    color: white;
-    font-family: "Segoe UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-h2 {
-    text-align: center;
-    font-family: "Segoe UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
+/* for EVERYTHING */
 body {
   font-family: "Segoe UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Headers */
+h1 {
+    text-align: center;
+    background-color: #e87f7f;
+    color: white;
+}
 
+h2 {
+    text-align: center;
+}
+
+/* Top navigation menu styling  */
 ul {
     font-size: 18px;
     list-style-type: none;
     display: inline-block;
-}
-
-img {
-  align-items: center;
 }
 
 nav {
@@ -31,7 +27,6 @@ nav {
   background-color: #F5F7FA;
   height: 60px;
   padding: 0 20px;
-  font-family: "Segoe UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav ul {
@@ -43,20 +38,31 @@ nav ul {
   width: 100%;
 }
 
-nav ul li {
-  display: inline-block;
-}
-
+/* Navigation Animation */
 nav ul li a:hover {
   background-color: #e87f7f;
-  transform: translateY(-2px);
 }
 
-nav ul li a.active {
-  background-color: #4FB0AE;
-  color: #fff;
+/*About page info */
+main ul {
+  list-style: circle;
 }
 
+#CASEL {
+  display: block;    
+  margin: 0 auto; 
+}
+
+.about-content {
+  max-width: 800px;       
+  margin: 0 auto;         
+  padding: 20px;          
+  line-height: 1.6; 
+}
+
+
+
+/*Home page info*/
 #featuredImage {
   display: block;    
   margin: 0 auto;   
@@ -66,43 +72,7 @@ figcaption {
   text-align: center;
 }
 
-.slides {
-  display: flex;           
-}
-
-.slides img {
-  width: 25%;
-  height: 300px;
-  object-fit: cover;       
-}
-
-#CASEL {
-  display: block;    
-  margin: 0 auto; 
-}
-
-#Lessons-Cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-}
-
-.card {
-  width: 250px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  text-align: center;
-  padding: 16px;
-  box-shadow: 2px 2px 6 px rgba(0,0,0,0.1);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
+/*Home page animation*/
 .Deck {
   display: flex;
   flex-wrap: wrap;
@@ -162,5 +132,29 @@ figcaption {
   color: white;
   transform: rotateY(180deg);
   z-index: 1;
+}
+
+
+/*Activity Page Cards  */
+#Lessons-Cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.card {
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  padding: 16px;
+  box-shadow: 2px 2px 6 px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
