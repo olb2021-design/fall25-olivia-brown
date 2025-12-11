@@ -54,10 +54,32 @@ main ul {
 }
 
 .about-content {
-  max-width: 800px;       
-  margin: 0 auto;         
-  padding: 20px;          
-  line-height: 1.6; 
+  display: block; /* or unset any flex/grid properties */
+}
+
+.about-content .text-content {
+  max-width: 900px;      /* limits the width of the text block */
+  margin-left: auto;      /* center horizontally */
+  margin-right: auto;     /* center horizontally */
+  padding: 60px 20px;    /* top/bottom 60px, left/right 20px */
+  line-height: 1.6;
+  text-align: left;       /* keep the text itself left-aligned */
+  box-sizing: border-box;
+}
+
+/* Make the card grid full width like home page */
+.about-content .Deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.cardflip {
+  width: 300px; /* adjust so multiple fit nicely */
+  height: 400px;
+  margin: 0; /* remove extra margins to avoid overlap */
 }
 
 
@@ -128,28 +150,41 @@ figcaption {
 }
 
 .card-back {
-  background: #e87f7f;
   color: white;
   transform: rotateY(180deg);
+  text-align: center;
   z-index: 1;
+  display: flex;
+  flex-direction: column;   
+  justify-content: center; 
+  align-items: center;     
+  padding: 20px;
 }
+
+.section-communication { background-color: #1e90ff; }  /* blue */
+.section-practical { background-color: #ff7f50; }      /* coral */
+.section-social { background-color: #32cd32; }         /* green */
+.section-relationship { background-color: #ff69b4; }   /* pink */
+.section-decision { background-color: #ffa500; }       /* orange */
+.section-emotional { background-color: #9370db; }      /* purple */
 
 
 /*Activity Page Cards  */
-#Lessons-Cards {
+ #Lessons-Cards {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
 }
 
+/* Individual card styling */
 .card {
   width: 250px;
   border: 1px solid #ccc;
   border-radius: 10px;
   text-align: center;
   padding: 16px;
-  box-shadow: 2px 2px 6 px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
 }
 
 .card img {
@@ -158,3 +193,39 @@ figcaption {
   margin-bottom: 10px;
 }
 
+/* Section tag styling */
+.section-tag {
+  display: inline-block;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+/* Optional section colors */
+.section-communication { background-color: #1e90ff; }
+.section-practical { background-color: #ff7f50; }
+.section-social { background-color: #32cd32; }
+.section-relationship { background-color: #ff69b4; }
+.section-decision { background-color: #ffa500; }
+.section-emotional { background-color: #9370db; }
+
+
+
+#Educator-Profile {
+  display: flex;
+  flex-wrap: wrap;      
+  gap: 16px;           
+  justify-content: center; 
+  margin-top: 20px;
+}
+
+.educator-card {
+  width: 300px;              /* different width */
+  background-color: #f0f0f0; /* different background */
+  padding: 20px;             /* more padding */
+  border: 2px solid #ccc;    /* optional */
+}

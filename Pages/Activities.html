@@ -1,31 +1,218 @@
 <!Doctype html>
 
-<head>  
-    <title>Project</title>
-     <link rel="stylesheet" type="text/css" href="/styles.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activities</title>
+  <link rel="stylesheet" href="/styles.css">
 </head>
-
 <body>
-    <nav>
-        <ul>
-            <li class="Home"><a href="/index.html">Home</a></li>
-            <li class="About"><a href="About.html">About</a></li>
-            <li class="Activities"><a href="Activities.html">Activities</a></li>
-            <li class="Community"><a href="Community.html">Community</a></li>
-        </ul>
-    </nav>
+  <nav>
+      <ul>
+          <li class="Home"><a href="/index.html">Home</a></li>
+          <li class="About"><a href="About.html">About</a></li>
+          <li class="Activities"><a href="Activities.html">Activities</a></li>
+          <li class="Community"><a href="Community.html">Community</a></li>
+      </ul>
+  </nav>
 
-    <div class="container">
-        <aside class="Filter">
-            <h2>Filters</h2>
-        </aside>
-    </div>
-    
-    <main>
-        <h1>Activities</h1>
-        <div id="Lessons-Cards"></div>  
-    </main>
-    <script src="/JS/script.js"></script>
+  <main>
+      <h1>Activities</h1>
+      <div id="Lessons-Cards"></div>
+  </main>
+<script>
+    const lessons = [
+       // ---------- COMMUNICATION ----------
+    { 
+        name: "Clear & Kind Communication Strips",
+        section: "Communication",
+        description: 'Students receive strips with partial phrases like "I feel… when…" or "Can you clarify…?" and practice completing them in pairs. They role-play real classroom misunderstandings and practice tone, word choice, and clarity.',
+        imagePath: "../assets/Communication.jpeg",
+        link: "LessonTemplate.html" 
+    },
+    {
+        name: "Active Listening Challenge",
+        section: "Communication",
+        description: `Students practice listening without interrupting. One student shares a short story while the partner summarizes accurately and asks one follow-up question.`,
+        imagePath: "../assets/Communication.jpeg",
+        link: "LessonTemplate.html"
+    },
+    {
+        name: "Rephrase It!",
+        section: "Communication",
+        description: `Students take examples of unclear or hurtful statements and rewrite them into clearer, kinder versions. Helps students understand impact and practice self-monitoring their language.`,
+        imagePath: "../assets/Communication.jpeg",
+        link: "LessonTemplate.html"
+    },
+
+    // ---------- PRACTICAL CLASSROOM ----------
+    {
+        name: "Routine Reset Check-In",
+        section: "Practical-Classroom",
+        description: `Students reflect on which classroom routines are working or not. They propose adjustments, discuss fairness and community expectations, and vote on small improvements to the day.`,
+        imagePath: "../assets/strategies.jpeg",
+        link: "SampleLesson.html"
+    },
+    {
+        name: "Focus Tools Try-It Station",
+        section: "Practical-Classroom",
+        description: `Students rotate through stations with different focus supports (timers, fidgets, noise levels, seating options) and reflect on which tools help them learn best.`,
+        imagePath: "../assets/strategies.jpeg",
+        link: "LessonTemplate.html"
+    },
+    {
+        name: "My Learning Environment Plan",
+        section: "Practical-Classroom",
+        description: `Students create a mini blueprint of their ideal classroom setup (lighting, noise level, seating) and explain choices.`,
+        imagePath: "../assets/strategies.jpeg",
+        link: "LessonTemplate.html"
+    },
+
+    // ---------- SOCIAL AWARENESS & EMPATHY ----------
+    {
+        name: "Emotion Perspective Cards",
+        section: "Social-Awareness-Empathy",
+        description: `Students read short scenarios from different points of view and identify how each character might feel and why.`,
+        imagePath: "../assets/empathy.jpeg",
+        link: "LessonTemplate.html"
+    },
+    {
+        name: "Empathy Mapping Gallery Walk",
+        section: "Social-Awareness-Empathy",
+        description: `Students complete empathy maps (Feel/Think/Do/Say) for characters or classmates experiencing common challenges.`,
+        imagePath: "../assets/empathy.jpeg",
+        link: "LessonTemplate.html"
+    },
+    {
+        name: "What Would You Do? Scenarios",
+        section: "Social-Awareness-Empathy",
+        description: `Students work through real-life dilemmas involving inclusion, teasing, or conflict.`,
+        imagePath: "../assets/empathy.jpeg",
+        link: "LessonTemplate.html"
+    },
+
+    // ---------- RELATIONSHIP BUILDING ----------
+    {
+        name: "Compliment Chain 2.0",
+        section: "Relationship-Building",
+        description: `Students practice giving specific compliments tied to effort and character.`,
+        imagePath: "../assets/teamwork.jpeg",
+        link: "LessonTemplate.html"
+    },
+    {
+        name: "Team Challenge Boxes",
+        section: "Relationship-Building",
+        description: `Groups receive small “team tasks” (build a tower, solve a riddle, draw blindfolded with instructions).`,
+        imagePath: "../assets/teamwork.jpeg",
+        link: "LessonTemplate.html"
+    },
+    {
+        name: "Friendship Problem-Solvers",
+        section: "Relationship-Building",
+        description: `Students explore common friendship challenges and brainstorm solutions.`,
+        imagePath: "../assets/teamwork.jpeg",
+        link: "LessonTemplate.html"
+    },
+
+    // ---------- RESPONSIBLE DECISION-MAKING ----------
+    {
+        name: "Choices & Consequences Sort",
+        section: "Responsible-Decision-Making",
+        description: `Students sort actions and possible consequences, then discuss why choices matter and how we repair harm.`,
+        imagePath: "../assets/decisions.jpeg",
+        link: "LessonTemplate.html"
+    },
+    {
+        name: "Goal Ladder Workshop",
+        section: "Responsible-Decision-Making",
+        description: `Students set a personal goal, break it into steps, and identify obstacles and supports.`,
+        imagePath: "../assets/decisions.jpeg",
+        link: "LessonTemplate.html"
+    },
+    {
+        name: "Would You Rather… Ethics Edition",
+        section: "Responsible-Decision-Making",
+        description: `Students debate fun but meaningful dilemmas involving fairness, honesty, or responsibility.`,
+        imagePath: "../assets/decisions.jpeg",
+        link: "LessonTemplate.html"
+    },
+
+    // ---------- EMOTIONAL REGULATION & SELF-AWARENESS ----------
+    {
+        name: "Check-In Circles",
+        section: "Emotional-Regulation-Self-Awareness",
+        description: `Students name and share their emotions using emojis, colors, or meter scales.`,
+        imagePath: "../assets/Regulation.jpeg",
+        link: "LessonTemplate.html"
+    },
+    {
+        name: "Strategy Toolbox Practice",
+        section: "Emotional-Regulation-Self-Awareness",
+        description: `Students try out breathing techniques, grounding exercises, and calm-down visuals.`,
+        imagePath: "../assets/Regulation.jpeg",
+        link: "LessonTemplate.html"
+    },
+    {
+        name: "My Triggers, My Tools Map",
+        section: "Emotional-Regulation-Self-Awareness",
+        description: `Students reflect on what makes them upset, what their body feels like, and which strategies help.`,
+        imagePath: "../assets/Regulation.jpeg",
+        link: "LessonTemplate.html"
+    }
+];
+
+    const sectionClassMap = {
+      "Communication": "section-communication",
+      "Practical-Classroom": "section-practical",
+      "Social-Awareness-Empathy": "section-social",
+      "Relationship-Building": "section-relationship",
+      "Responsible-Decision-Making": "section-decision",
+      "Emotional-Regulation-Self-Awareness": "section-emotional"
+    };
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const lessonsGallery = document.getElementById("Lessons-Cards");
+
+      lessons.forEach(function(lesson) {
+        const cardDiv = document.createElement("div");
+        cardDiv.className = "card";
+
+        // Section tag
+        const tag = document.createElement("span");
+        tag.className = `section-tag ${sectionClassMap[lesson.section] || ""}`;
+        tag.textContent = lesson.section;
+        cardDiv.appendChild(tag);
+
+        // Title
+        const title = document.createElement("h2");
+        title.textContent = lesson.name;
+        cardDiv.appendChild(title);
+
+        // Image
+        const img = document.createElement("img");
+        img.src = lesson.imagePath;
+        img.alt = lesson.name;
+        cardDiv.appendChild(img);
+
+        // Description
+        const desc = document.createElement("p");
+        desc.textContent = lesson.description;
+        cardDiv.appendChild(desc);
+
+        // Link
+        const link = document.createElement("a");
+        link.href = lesson.link;
+        link.textContent = "Click here for details";
+        cardDiv.appendChild(link);
+
+        lessonsGallery.appendChild(cardDiv);
+      });
+    });
+  </script>
+  
 </body>
+
+    
+
 
 </html>
